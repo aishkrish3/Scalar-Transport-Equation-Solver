@@ -7,7 +7,7 @@ MeshData FirstOrderExplicit::CreateCNConvDiff(double CFL)
 
 bool FirstOrderExplicit::SolvePhi()
 {
-	return false;
+	return true;
 }
 
 void FirstOrderExplicit::CalcPhi(int i, int j, double conv, double diff,
