@@ -1,6 +1,6 @@
-## Scalar Transport Equation Solver
+# Scalar Transport Equation Solver
 
-### Decription:
+## Decription:
 This solver aims to solve the unsteady, scalar transport euation in 2D. This equations consists of an unsteady term, diffusion term, convective term and source.
 Examples of a scalar would be mass or temperature. The latter can be thought of as a heat sink and a source in a 2D mesh. The code implements a uniform cartesian mesh of [0,1]x[1,0] domain with periodic boundary conditions. It comprises of 32 cells in x direction and 32 cells in y direction. 
 
@@ -15,22 +15,26 @@ The project implements various control volume techniques for solving the equatio
     
 The plot shows the unsteady transport of the scalar, φ due to the convective, diffusion and source terms. The convective term specifies movement of φ based on velocities. The diffusion term specifies the “spread” of φ.
 
-### How to build:
+## How to build:
 You will need the following packages in a Debian/Ubuntu environment:
  - GNU C++ compiler with C++17 support
- - Armadillo: http://arma.sourceforge.net/download.html
- - Boost: https://www.boost.org/users/download/
- - GNUPlot: http://www.gnuplot.info/download.html
+ - [Armadillo](http://arma.sourceforge.net/download.html), a linear algebra solver for C++.
+ - [GNUPlot](http://www.gnuplot.info/download.html), for data visualization.
+ - [GNUplot-iostream interface](https://code.google.com/archive/p/gnuplot-cpp/), a C++ interface for GNUPlot.
+   - Requires[boost](https://www.boost.org/users/download/) C++ libraries.
 
-#### Manual build:
+### Manual build:
 In order to build this project from the command line:
 ```console
 $ cd Debug
 $ make
 ```
 
-#### Automated build:
+### Automated build:
 This repository contains Unix specific Eclipse CDT settings for convenience. 
+
+## License:
+This is distributed under [MIT License](https://github.com/aishkrish3/Scalar-Transport-Equation-Solver/edit/master/LICENSE).
  
-### Author:
+## Author:
 Aishwarya Krishnan
