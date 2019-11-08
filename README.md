@@ -7,7 +7,7 @@ The project implements following control volume schemes for solving the equation
  - [Second order linear reconstruction](https://en.wikipedia.org/wiki/MUSCL_scheme) to compute the derivative of scalar in the diffusion term - the method by which the cell-centered, averaged values of conserved quantities are interpolated to cell faces, in order to calculate the left-state and right-state needed to compute fluxes, in this case the diffusion flux.
  - 3rd order [QUICK](https://en.wikipedia.org/wiki/QUICK_scheme) (Quadratic Upstream Interpolation for Convective Kinematics) scheme for convective flux - higher-order differencing scheme that considers a three-point upstream weighted quadratic interpolation for the cell face values.
  The project uses two [time integration schemes](https://en.wikipedia.org/wiki/Temporal_discretization) specified by the user:
-    - 1st order explicit - implemented by the FTCS(Forward Time Central Space) scheme which is conditionally stable.
+    - 1st order explicit - implemented by the FTCS (Forward Time Central Space) scheme which is conditionally stable.
     - 2nd order Crank-Nicolson - It is a second-order implicit method in time which is proven to be unconditionally stable.
     
  The time step (**_Δt_**) is restricted by stability limit of the solver (i.e., time step is limited by the [Courant–Friedrichs–Lewy number](https://en.wikipedia.org/wiki/Courant%E2%80%93Friedrichs%E2%80%93Lewy_condition) equal to 0.8 in this solver.).
